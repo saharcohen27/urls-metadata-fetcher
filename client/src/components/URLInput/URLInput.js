@@ -19,7 +19,7 @@ function URLInput({ index, handleChange, url }) {
   };
 
   return (
-    <div className="URLInput-container">
+    <div className={`URLInput-container ${isValid ? "" : "input-error"}`}>
       <LinkIcon className="input-icon" />
       <input
         name="url"

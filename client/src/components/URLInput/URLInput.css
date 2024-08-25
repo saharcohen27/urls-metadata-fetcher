@@ -24,3 +24,7 @@
 .alert {
   border-radius: 0;
 }
+
+.input-error {
+  background-color: #d32f2f;
+}
