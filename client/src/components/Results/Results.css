@@ -1,0 +1,10 @@
+.results-container {
+  margin: 1rem;
+  background-color: var(--color-10);
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.results-title {
+  font-size: 2rem;
+}

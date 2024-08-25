@@ -1,0 +1,33 @@
+.result-container {
+  background-color: var(--color-20);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.result-body {
+  display: flex;
+}
+
+.result-image {
+  width: 3rem;
+  height: 3rem;
+}
+
+.result-desc {
+  margin: 0.3rem;
+}
+
+.missing {
+  color: red;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.226);
+}
