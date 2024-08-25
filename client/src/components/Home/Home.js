@@ -14,13 +14,13 @@ import "./Home.css";
 const baseUrl = process.env.REACT_APP_API_URL;
 
 function Home() {
-  const [urls, setUrls] = useState(Array(3).fill(""));
+  const [urls, setUrls] = useState(Array(3).fill("https://"));
   const [alert, setAlert] = useState({ type: "", msg: "" });
   const [results, setResults] = useState([]);
 
   const addURL = () => {
     setUrls((prevUrls) => {
-      return addValue(prevUrls, "");
+      return addValue(prevUrls, "https://");
     });
   };
 

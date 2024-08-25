@@ -10,6 +10,8 @@
   justify-content: center;
   align-items: center;
   font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-70);
 }
 
 .form-container {
@@ -31,10 +33,11 @@
   border: 0;
   cursor: pointer;
   background-color: var(--color-20);
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 12px;
+  color: var(--color-80);
 }
 
 .buttons > button:hover {
