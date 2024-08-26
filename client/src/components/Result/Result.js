@@ -32,7 +32,7 @@ function Result({ url, error, title, desc, image }) {
           {!!title ? title : "No Title Available"}
         </div>
         <a href={url} className="result-url">
-          {url} <OpenInNewIcon fontSize="small" />
+          {url}<OpenInNewIcon fontSize="small" />
         </a>
       </div>
       <div className="result-body">

@@ -27,19 +27,36 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width: 80%;
 }
 
-.buttons > button {
+.buttons {
+  flex-direction: column;
+}
+
+.buttons > * {
   border: 0;
   cursor: pointer;
   background-color: var(--color-20);
   font-size: 1rem;
   margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
+  border-radius: 8px;
   color: var(--color-80);
 }
 
-.buttons > button:hover {
+.buttons > *:hover {
   background-color: var(--color-30);
+}
+
+.add-btn {
+  font-size: 0.8rem;
+}
+
+.submit-btn {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.submit-btn:hover {
+  box-shadow: 0px 0px 20px 0px #ffffff;
 }

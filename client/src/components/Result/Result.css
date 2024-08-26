@@ -1,8 +1,10 @@
 .result-container {
-  background-color: var(--color-20);
+  background-color: var(--color-80);
   padding: 0.5rem;
   border-radius: 8px;
   margin: 0.5rem;
+  color: white;
+  box-shadow: 0px 0px 15px 0px #ffffff;
 }
 
 .result-header {
@@ -33,5 +35,27 @@
 }
 
 .result-url {
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  padding: 0 0.7rem;
+  max-height: 2rem;
+}
+
+.result-url:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.result-image {
+  margin: 0.2rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.result-title {
+  font-weight: bold;
 }

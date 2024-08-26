@@ -56,13 +56,13 @@ function Home() {
             <URLInput url={url} index={index} handleChange={handleChange} />
           ))}
           <div className="buttons">
-            <button className="add-btn" onClick={addURL}>
-              Add Url
+            <div className="add-btn" onClick={addURL}>
+              Add URL
               <AddIcon />
-            </button>
-            <button className="submit-btn" onClick={handleSubmit}>
+            </div>
+            <div className="submit-btn" onClick={handleSubmit}>
               Submit
-            </button>
+            </div>
           </div>
         </div>
       </div>
