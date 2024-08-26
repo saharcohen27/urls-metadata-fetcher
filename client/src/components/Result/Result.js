@@ -29,7 +29,7 @@ function Result({ url, error, title, desc, image }) {
     <div className="result-container">
       <div className="result-header">
         <div className={`result-title ${title ? "" : "missing"}`}>
-          {!!title ? title : "No Description Avaiable"}
+          {!!title ? title : "No Title Available"}
         </div>
         <a href={url} className="result-url">
           {url} <OpenInNewIcon fontSize="small" />
@@ -46,7 +46,7 @@ function Result({ url, error, title, desc, image }) {
           }
         />
         <div className={`result-desc ${desc ? "" : "missing"}`}>
-          {!!desc ? desc : "No Description Avaiable"}
+          {!!desc ? desc : "No Description Available"}
         </div>
       </div>
     </div>
