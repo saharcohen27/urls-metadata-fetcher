@@ -28,12 +28,13 @@ function Result({ url, error, title, desc, image }) {
   return (
     <div className="result-container">
       <div className="result-header">
+        <a href={url} className="result-url">
+          {url}
+          <OpenInNewIcon fontSize="small" />
+        </a>
         <div className={`result-title ${title ? "" : "missing"}`}>
           {!!title ? title : "No Title Available"}
         </div>
-        <a href={url} className="result-url">
-          {url}<OpenInNewIcon fontSize="small" />
-        </a>
       </div>
       <div className="result-body">
         <img
