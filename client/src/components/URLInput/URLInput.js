@@ -1,10 +1,7 @@
-import { useState } from "react";
-
+import { memo, useState } from "react";
 import LinkIcon from "@mui/icons-material/Link";
 import Alert from "@mui/material/Alert";
-
 import "./URLInput.css";
-
 import isValidUrl from "../../utils";
 
 function URLInput({ index, handleChange, url }) {
@@ -38,4 +35,4 @@ function URLInput({ index, handleChange, url }) {
   );
 }
 
-export default URLInput;
+export default memo(URLInput);

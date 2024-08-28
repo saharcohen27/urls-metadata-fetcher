@@ -19,6 +19,12 @@
   height: 4vh;
   font-size: 1.3rem;
   border-radius: 0 6px 6px 0px;
+  border: 0;
+}
+
+.url-input:hover,
+.url-input:focus {
+  border: 0;
 }
 
 .alert {

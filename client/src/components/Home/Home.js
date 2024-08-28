@@ -1,14 +1,10 @@
-import { useState } from "react";
-
+import { useState, useCallback } from "react";
 import AddIcon from "@mui/icons-material/Add";
-
 import URLInput from "../URLInput/URLInput";
 import AlertWrapper from "../AlertWrapper/AlertWrapper";
 import Results from "../Results/Results";
-
 import { changeVal, addValue, allValidURLs } from "../../utils";
 import fetchData from "../../services/fetchURLs";
-
 import "./Home.css";
 
 const baseUrl = process.env.REACT_APP_API_URL;
@@ -19,21 +15,17 @@ function Home() {
   const [results, setResults] = useState([]);
 
   const addURL = () => {
-    setUrls((prevUrls) => {
-      return addValue(prevUrls, "https://");
-    });
+    setUrls((prevUrls) => addValue(prevUrls, "https://"));
   };
 
-  const handleChange = (index, newVal) => {
-    setUrls((prevUrls) => {
-      return changeVal(prevUrls, index, newVal);
-    });
-  };
+  const handleChange = useCallback((index, newVal) => {
+    setUrls((prevUrls) => changeVal(prevUrls, index, newVal));
+  }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     setAlert({ type: "info", msg: "Loading..." });
     if (!allValidURLs(urls)) {
-      setAlert({ type: "error", msg: "At Least one url is invalid" });
+      setAlert({ type: "error", msg: "At least one URL is invalid" });
       return;
     }
     fetchData(`${baseUrl}/fetch-metadata`, urls)
@@ -53,7 +45,12 @@ function Home() {
         <div className="home-title">Insert URLs</div>
         <div className="form-container">
           {urls.map((url, index) => (
-            <URLInput url={url} index={index} handleChange={handleChange} />
+            <URLInput
+              key={index}
+              url={url}
+              index={index}
+              handleChange={handleChange}
+            />
           ))}
           <div className="buttons">
             <div className="add-btn" onClick={addURL}>
